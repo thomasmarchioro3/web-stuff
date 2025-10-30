@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <title>Dashboard</title>
+
+</head>
+<body>
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" class="container" style="display: none;">
+        <div class="header">
+            <h1>Real-Time Dashboard</h1>
+            <div class="user-info">
+                <span id="username-display"></span>
+                <button id="logout-btn" class="btn-secondary">Logout</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="chart-header">
+                <h2>Stream</h2>
+                <div class="status">
+                    <span id="connection-status" class="status-badge">Disconnected</span>
+                    <span id="latest-value">--</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="ts-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

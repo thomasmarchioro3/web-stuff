@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Example dynamic graph</title>
+  <script src="d3.v7.min.js"></script>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background:#fafafa; }
+    header { padding: 8px 12px; border-bottom: 1px solid #ddd; background: #fff; display: flex; gap: 8px; align-items: center; }
+    button { padding: 6px 10px; border: 1px solid #bbb; border-radius: 6px; background: #fff; cursor: pointer; }
+    button:hover { background: #f3f3f3; }
+    svg { width: 100vw; height: calc(100vh - 48px); display: block; }
+    .link { stroke: #888; stroke-width: 2px; fill: none; }
+    .node circle { fill: steelblue; }
+    .node text { font-size: 12px; fill: #111; pointer-events: none; }
+    .label { font-size: 12px; fill: #333; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Example dynamic graph</strong>
+    <button id="addNode">Add node</button>
+    <button id="removeNode">Remove node</button>
+    <button id="reset">Reset</button>
+  </header>
+  <svg></svg>
+
+  <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,3 +1,3 @@
-- [ ] Add javascript code in `frontend/main.js` to handle the login
-- [ ] Add logout button in `frontend/index.html` that is visible only if the user is logged in (toggle visibility in `frontent/main.js`)
-- [ ] Add logout handler in `main.py`
+- [x] Add javascript code in `frontend/main.js` to handle the login
+- [x] Add logout button in `frontend/index.html` that is visible only if the user is logged in (toggle visibility in `frontent/main.js`)
+- [x] Add logout handler in `main.py`

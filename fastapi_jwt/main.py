@@ -1,3 +1,4 @@
+import os
 from datetime import timedelta
 
 from typing import Annotated
@@ -8,6 +9,8 @@ from fastapi.staticfiles import StaticFiles
 
 from backend.login import User, Token
 from backend.login import authenticate_user, create_access_token, get_current_active_user, ACCESS_TOKEN_EXPIRE_MINUTES
+
+from backend.environment import *
 
 app = FastAPI()
 
@@ -41,6 +44,15 @@ async def read_own_items(
     current_user: Annotated[User, Depends(get_current_active_user)],
 ):
     return [{"item_id": "Foo", "owner": current_user.username}]
+
+
+@app.post("/logout")
+async def logout_user(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
+    # JWTs are stateless, so logging out is handled on the client. We still validate the
+    # provided token to signal whether the operation is allowed.
+    return {"detail": f"User {current_user.username} logged out"}
 
 
 app.mount("/", StaticFiles(directory="frontend", html=True,), name="static")

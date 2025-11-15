@@ -8,22 +8,31 @@
 				<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-<form id="loginForm" method="post">
 
-				<div class="container">
-				<label for="username"><b>Username</b></label>
-				<input type="text" placeholder="john" name="username" required>
+<div id="content">
 
-				<label for="password"><b>Password</b></label>
-				<input type="password" placeholder="password" name="password" required>
+	<form id="loginForm" method="post" hidden>
+		<div class="container">
+		<label for="username"><b>Username</b></label>
+		<input type="text" placeholder="john" name="username" required>
 
-				<button id="loginBtn" type="submit">Login</button>
-				<label>
-				<!-- <input type="checkbox" checked="checked" name="remember"> Remember me -->
-				</label>
-				</div>
+		<label for="password"><b>Password</b></label>
+		<input type="password" placeholder="password" name="password" required>
 
-			<script src="main.js" type="module"></script>
-</form>
+		<button id="loginBtn" type="submit">Login</button>
+		
+		<label>
+		<!-- <input type="checkbox" checked="checked" name="remember"> Remember me -->
+		</label>
+		</div>
+	</form>
+
+	<div id="userContent" hidden>
+		<button id="logoutBtn" type="button">Logout</button>
+	</div>
+	
+</div>
+
+<script src="main.js" type="module"></script>
 </body>
 </html>

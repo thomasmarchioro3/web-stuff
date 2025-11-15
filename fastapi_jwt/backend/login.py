@@ -9,6 +9,8 @@ from jwt.exceptions import InvalidTokenError
 from pwdlib import PasswordHash
 from pydantic import BaseModel
 
+from backend.environment import *
+
 # to get a string like this run:
 SECRET_KEY = str(os.environ.get("JWT_SECRET_KEY"))
 DEFAULT_ADMIN_PASSWORD_HASH = str(os.environ.get("DEFAULT_ADMIN_PASSWORD_HASH")) 
@@ -62,6 +64,9 @@ app = FastAPI()
 
 
 def verify_password(plain_password, hashed_password):
+    print("Received plain password:", plain_password)
+    print("Received hashed_password:", hashed_password)
+
     return password_hash.verify(plain_password, hashed_password)
 
 

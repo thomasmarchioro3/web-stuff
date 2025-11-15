@@ -1,0 +1,17 @@
+[project]
+name = "fastapi-jwt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.121.2",
+    "pwdlib[argon2]>=0.3.0",
+    "pyjwt[crypto]>=2.10.1",
+    "python-dotenv>=1.2.1",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.38.0",
+]
+
+[tool.pyright]
+typeCheckingMode = "basic"
